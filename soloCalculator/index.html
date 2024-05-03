@@ -22,7 +22,6 @@
 
             <div class="buttons">
                 <div>
-                    <!-- this will clear the expression and the result -->
                     <input type="button" value="AC" class="fnkeys" onclick="expression.value = ''; result.value =''" />
                     <input type="button" value="←" class="fnkeys" onclick="expression.value = expression.value.toString().slice(0,-1)" />
                     <input type="button" value="/" class="operator" onclick="expression.value += '/'" />
@@ -48,7 +47,7 @@
                 </div>
                 <div>
                     <input type="button" value="0" onclick="expression.value += '0'" />
-                    <input type="button" value="00" onclick="expression.value += '00'" />
+                    <input type="button" value="00" class="falsezero" />
                     <input type="button" value="=" class="operator equal" onclick="result.value = new Intl.NumberFormat().format(eval(expression.value))" />
                 </div>
 
