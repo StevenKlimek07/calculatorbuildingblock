@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root,
+:root.dark {
+    --primary-bg: #22252d;
+    --color-fg: #f8f8f8;
+    --secondary-bg: #292d36;
+    --buttons-bg: #272b33;
+    --background-image: url("https://cdn.mos.cms.futurecdn.net/k6okX2VVUg4qWoyxuNLsf7-1200-80.jpg");
+}
+
+:root.light {
+    --primary-bg: #fff;
+    --color-fg: #292d36;
+    --secondary-bg: #f9f9f9;
+    --buttons-bg: #f7f7f7;
+    --background-image: url("https://www.pressconnects.com/gcdn/-mm-/22fe5d2316a0bf4d102ae9ec3fddaf100a03eee1/c=0-1239-2848-2848/local/-/media/2016/10/13/CNYGroup/Binghamton/636119663461962333-Sun.jpg?width=2848&height=1609&fit=crop&format=pjpg&auto=webp");
+}
+
+body {
+    background-image: var(--background-image);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-bg);
+    border: thick double var(--color-fg);
+    width: 300px;
+    padding-top: 20px;
+    box-shadow: 0 0 20px 0 var(--secondary-bg);
+    border-radius: 10px;
+}
+
+.togglemode {
+    margin: 4px auto;
+    background: var(--secondary-bg);
+    padding: 4px 6px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: thick double var(--color-fg);
+}
+
+.togglemode .dark,
+.togglemode .light {
+    color: var(--color-fg);
+    margin: 2px 8px;
+    cursor: pointer;
+}
+
+.resultbox {
+    width: 275px;
+    height: 50px;
+    text-align: center;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    border: thick double var(--color-fg);
+    border-radius: 10px;
+    background: var(--secondary-bg);
+}
+
+.resultbox input {
+    font-size: large;
+    text-align: right;
+    width: 80%;
+    padding: 10px 10px;
+    background: var(--secondary-bg);
+    border: 20px;
+    color: var(--color-fg);
+    cursor: default;
+}
+
+
+.buttons {
+    width: calc(100% - 20px);
+    border-radius: 20px;
+    padding: 10px 10px;
+    padding-bottom: 30px;
+    border-radius: 20px;
+    border-color: var(--color-fg);
+    border-radius: 10px;
+}
+
+.buttons div {
+    display: flex;
+    justify-content: space-around;
+    margin: 8px auto;
+    border-radius: 10px;
+}
+
+.buttons div input {
+    font-size: large;
+    border: thick double var(--color-fg);
+    color: var(--color-fg);
+    background-color: var(--buttons-bg);
+    width: 60px;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.buttons div input:hover {
+    background-color: var(--color-fg);
+    color: var(--secondary-bg);
+  }
+
+.equal {
+    width: 130px !important;
+}
